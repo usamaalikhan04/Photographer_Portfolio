@@ -142,285 +142,6 @@
     <!-- Testominial section -->
 
     <div class="section">
-      <div class="heading"><a href="#">TESTOMINIAL</a></div>
-      <!-- <div class="Testominials">
-        <div class="Testominial">
-          <div class="Testominial-comment">
-            <svg width="30" height="30" class="quotation">
-              <image
-                href="assets/images/Quotation.svg"
-                width="100%"
-                height="100%"
-              />
-            </svg>
-            <br />
-            <div class="quotation-text">
-              <span
-                >I couldn't be happier with the beautiful photographs that
-                Rachel Davis captured of my family. They truly have a gift for
-                creating images that are not only stunning but also full of life
-                and personality. Thank you for creating such wonderful memories
-                for us!"</span
-              >
-            </div>
-          </div>
-          <div class="Testominial-name">
-            <div class="Testominial-Wrapper">
-              <div class="Testominial-Title">Sophia Martinez</div>
-              <div class="Testominial-Designation">MD, Ornan Corp.</div>
-              <div class="Testominial-Circle">
-                <div class="Testominial-Inner-circle">
-                  <img
-                    src="assets/images/profile_picture.jpg"
-                    alt="Profile Picture"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      <div id="testimonial-container"></div>
-      <script>
-        // Example data for multiple testimonials
-        const testimonials = [
-          {
-            quotationImage: "assets/images/Icons/Quotation.svg",
-            comment:
-              "I couldn't be happier with the beautiful photographs that Rachel Davis captured of my family. They truly have a gift for creating images that are not only stunning but also full of life and personality. Thank you for creating such wonderful memories for us!",
-            name: "Sophia Martinez",
-            designation: "MD, Ornan Corp.",
-            profilePicture: "assets/images/profile_picture.jpg",
-          },
-          {
-            quotationImage: "assets/images/Icons/Quotation.svg",
-            comment:
-              "Working with Rachel Davis was an absolute pleasure. They were professional, creative, and dedicated to getting the perfect shot. I was blown away by the quality of the images they delivered, and I would highly recommend them to anyone looking for a top-notch photographer.",
-            name: "Lucas Chen",
-            designation: "MD, Ornan Corp.",
-            profilePicture: "assets/images/profile_picture2.jpg",
-          },
-          {
-            quotationImage: "assets/images/Icons/Quotation.svg",
-            comment:
-              "I was impressed with Rachel Davis's ability to capture the essence of our wedding day in such a beautiful way. Their attention to detail and artistic eye made for some truly stunning photos that we will treasure for a lifetime. Thank you for making our special day even more memorable!",
-            name: "Isabella Johnson",
-            designation: "MD, Ornan Corp.",
-            profilePicture: "assets/images/profile_picture3.jpg",
-          },
-          // Add more testimonials as needed
-        ];
-
-        // Function to generate testimonials dynamically
-
-        function generateTestimonials() {
-          const testimonialContainer = document.getElementById(
-            "testimonial-container"
-          );
-
-          // Clear existing content
-          testimonialContainer.innerHTML = "";
-
-          // Generate testimonials
-          testimonials.forEach((testimonial) => {
-            const testimonialDiv = document.createElement("div");
-            testimonialDiv.classList.add("Testominial");
-
-            const commentDiv = document.createElement("div");
-            commentDiv.classList.add("Testominial-comment");
-
-            const quotationSvg = document.createElementNS(
-              "http://www.w3.org/2000/svg",
-              "svg"
-            );
-            quotationSvg.setAttribute("width", "30");
-            quotationSvg.setAttribute("height", "30");
-            quotationSvg.classList.add("quotation");
-
-            const quotationImage = document.createElementNS(
-              "http://www.w3.org/2000/svg",
-              "image"
-            );
-            quotationImage.setAttribute("href", testimonial.quotationImage);
-            quotationImage.setAttribute("width", "100%");
-            quotationImage.setAttribute("height", "100%");
-
-            quotationSvg.appendChild(quotationImage);
-            commentDiv.appendChild(quotationSvg);
-
-            const quotationTextDiv = document.createElement("div");
-            quotationTextDiv.classList.add("quotation-text");
-
-            const commentSpan = document.createElement("span");
-            commentSpan.textContent = testimonial.comment;
-
-            quotationTextDiv.appendChild(commentSpan);
-            commentDiv.appendChild(quotationTextDiv);
-
-            const nameDiv = document.createElement("div");
-            nameDiv.classList.add("Testominial-name");
-
-            const nameWrapperDiv = document.createElement("div");
-            nameWrapperDiv.classList.add("Testominial-Wrapper");
-
-            const titleDiv = document.createElement("div");
-            titleDiv.classList.add("Testominial-Title");
-            titleDiv.textContent = testimonial.name;
-
-            const designationDiv = document.createElement("div");
-            designationDiv.classList.add("Testominial-Designation");
-            designationDiv.textContent = testimonial.designation;
-
-            const circleDiv = document.createElement("div");
-            circleDiv.classList.add("Testominial-Circle");
-
-            const innerCircleDiv = document.createElement("div");
-            innerCircleDiv.classList.add("Testominial-Inner-circle");
-
-            const profilePictureImg = document.createElement("img");
-            profilePictureImg.src = testimonial.profilePicture;
-            profilePictureImg.alt = "Profile Picture";
-
-            innerCircleDiv.appendChild(profilePictureImg);
-            circleDiv.appendChild(innerCircleDiv);
-
-            nameWrapperDiv.appendChild(titleDiv);
-            nameWrapperDiv.appendChild(designationDiv);
-            nameWrapperDiv.appendChild(circleDiv);
-
-            nameDiv.appendChild(nameWrapperDiv);
-
-            testimonialDiv.appendChild(commentDiv);
-            testimonialDiv.appendChild(nameDiv);
-
-            testimonialContainer.appendChild(testimonialDiv);
-          });
-        }
-
-        // Call the function to generate testimonials
-        generateTestimonials();
-      </script>
-      <!-- </div> -->
-    </div>
-
-    <!-- Services Section -->
-
-    <div class="section">
-      <div class="heading"><a href="#">SERVICES</a></div>
-      <div class="Services-Container">
-        <div class="Service">
-          <div class="Service-Icon">
-            <svg width="50" height="45">
-              <image
-                class="Service-Icon-Image"
-                href="assets/images/Icons/Camera_.svg"
-                width="100%"
-                height="100%"
-              />
-            </svg>
-          </div>
-          <div class="Service-Title">Portrait Photography</div>
-          <div class="Service-Desc">
-            Capture beautiful moments with our expert portrait photography
-            services.
-          </div>
-        </div>
-        <div class="Service-2">
-          <div class="Service-Icon Service-Icon-2">
-            <svg width="50" height="45">
-              <image
-                class="Service-Icon-Image"
-                href="assets/images/Icons/Wedding.png"
-                width="100%"
-                height="100%"
-              />
-            </svg>
-          </div>
-          <div class="Service-Title Service-Title-2">Wedding Photography</div>
-          <div class="Service-Desc Service-Desc-2">
-            Capture the magic of your special day with our wedding photography
-            packages.
-          </div>
-        </div>
-        <div class="Service">
-          <div class="Service-Icon">
-            <svg width="50" height="45">
-              <image
-                class="Service-Icon-Image"
-                href="assets/images/Icons/Real_Estate.svg"
-                width="100%"
-                height="100%"
-              />
-            </svg>
-          </div>
-          <div class="Service-Title">Real Estate Photography</div>
-          <div class="Service-Desc">
-            Showcase your property with our high-quality real estate photography
-            services.
-          </div>
-        </div>
-        <div class="Service">
-          <div class="Service-Icon">
-            <svg width="50" height="45">
-              <image
-                class="Service-Icon-Image"
-                href="assets/images/Icons/New_Born.svg"
-                width="100%"
-                height="100%"
-              />
-            </svg>
-          </div>
-          <div class="Service-Title">Newborn Photography</div>
-          <div class="Service-Desc">
-            Capture the precious moments of your newborn with our photography
-            services.
-          </div>
-        </div>
-        <div class="Service-2 Service-3">
-          <div class="Service-Icon Service-Icon-2">
-            <svg width="50" height="45">
-              <image
-                class="Service-Icon-Image"
-                href="assets/images/Icons/Landscape.svg"
-                width="100%"
-                height="100%"
-              />
-            </svg>
-          </div>
-          <div class="Service-Title Service-Title-2">Landscape Photography</div>
-          <div class="Service-Desc Service-Desc-2">
-            Experience the beauty of nature with our landscape photography
-            services.
-          </div>
-        </div>
-        <div class="Service">
-          <div class="Service-Icon">
-            <svg width="50" height="45">
-              <image
-                class="Service-Icon-Image"
-                href="assets/images/Icons/Photo_Editing.svg "
-                width="100%"
-                height="100%"
-              />
-            </svg>
-          </div>
-          <div class="Service-Title">Photo Editing</div>
-          <div class="Service-Desc">
-            Enhance the quality and appeal of your photos with our professional
-            editing services.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="Contact-Container">
-        <div class="heading"><a href="#">Interested in any Services</a></div>
-        <div class="Contact-Desc">Contact me today to learn more!</div>
-        <button class="Contact-Button" type="button">CONTACT</button>
-      </div>
-    </div>
-
-    <div class="section">
       <div class="heading"><a href="#">Testominial</a></div>
       <div class="Testimonial">
         <!-- Testimonial  -->
@@ -546,6 +267,127 @@
         </div>
       </div>
     </div>
+
+
+    <!-- Services Section -->
+
+    <div class="section">
+      <div class="heading"><a href="#">SERVICES</a></div>
+      <div class="Services-Container">
+        <div class="Service">
+          <div class="Service-Icon">
+            <svg width="50" height="45">
+              <image
+                class="Service-Icon-Image"
+                href="assets/images/Icons/Camera_.svg"
+                width="100%"
+                height="100%"
+              />
+            </svg>
+          </div>
+          <div class="Service-Title">Portrait Photography</div>
+          <div class="Service-Desc">
+            Capture beautiful moments with our expert portrait photography
+            services.
+          </div>
+        </div>
+        <div class="Service-2">
+          <div class="Service-Icon Service-Icon-2">
+            <svg width="50" height="45">
+              <image
+                class="Service-Icon-Image"
+                href="assets/images/Icons/Wedding.png"
+                width="100%"
+                height="100%"
+              />
+            </svg>
+          </div>
+          <div class="Service-Title Service-Title-2">Wedding Photography</div>
+          <div class="Service-Desc Service-Desc-2">
+            Capture the magic of your special day with our wedding photography
+            packages.
+          </div>
+        </div>
+        <div class="Service">
+          <div class="Service-Icon">
+            <svg width="50" height="45">
+              <image
+                class="Service-Icon-Image"
+                href="assets/images/Icons/Real_Estate.svg"
+                width="100%"
+                height="100%"
+              />
+            </svg>
+          </div>
+          <div class="Service-Title">Real Estate Photography</div>
+          <div class="Service-Desc">
+            Showcase your property with our high-quality real estate photography
+            services.
+          </div>
+        </div>
+        <div class="Service">
+          <div class="Service-Icon">
+            <svg width="50" height="45">
+              <image
+                class="Service-Icon-Image"
+                href="assets/images/Icons/New_Born.svg"
+                width="100%"
+                height="100%"
+              />
+            </svg>
+          </div>
+          <div class="Service-Title">Newborn Photography</div>
+          <div class="Service-Desc">
+            Capture the precious moments of your newborn with our photography
+            services.
+          </div>
+        </div>
+        <div class="Service-2 Service-3">
+          <div class="Service-Icon Service-Icon-2">
+            <svg width="50" height="45">
+              <image
+                class="Service-Icon-Image"
+                href="assets/images/Icons/Landscape.svg"
+                width="100%"
+                height="100%"
+              />
+            </svg>
+          </div>
+          <div class="Service-Title Service-Title-2">Landscape Photography</div>
+          <div class="Service-Desc Service-Desc-2">
+            Experience the beauty of nature with our landscape photography
+            services.
+          </div>
+        </div>
+        <div class="Service">
+          <div class="Service-Icon">
+            <svg width="50" height="45">
+              <image
+                class="Service-Icon-Image"
+                href="assets/images/Icons/Photo_Editing.svg "
+                width="100%"
+                height="100%"
+              />
+            </svg>
+          </div>
+          <div class="Service-Title">Photo Editing</div>
+          <div class="Service-Desc">
+            Enhance the quality and appeal of your photos with our professional
+            editing services.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="Contact-Container">
+        <div class="heading"><a href="#">Interested in any Services</a></div>
+        <div class="Contact-Desc">Contact me today to learn more!</div>
+        <button class="Contact-Button" type="button">CONTACT</button>
+      </div>
+    </div>
+
+    
 
     <footer class="Footer">
       <div class="Footer-Container">
